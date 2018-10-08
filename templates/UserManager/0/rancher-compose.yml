@@ -1,0 +1,26 @@
+version: '2'
+catalog:
+  name: phpapp
+  version: 0.0.1
+  description: xxxxxxxxxxx
+  questions:
+    - variable: "app_port"
+      type: "int"
+      required: true
+      label: "php port"
+      description: "php port expose to host"
+      default: 8006
+    - variable: "mysql_port"
+      type: "int"
+      required: true
+      label: "mysql port"
+      description: "mysql port expose to host"
+      default: 3306
+
+services:
+  php-nginx-fine:
+    scale: 1
+    start_on_create: true
+  mysql-fine:
+    scale: 1
+    start_on_create: true
