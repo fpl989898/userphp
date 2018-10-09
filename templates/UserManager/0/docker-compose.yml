@@ -9,8 +9,6 @@ services:
     - mysql-fine
     depends_on:
     - mysql-fine
-    ports:
-    - "${app_port}:80"
     restart: always
   mysql-fine:
     image: 192.168.11.249:80/test/mysql_fine:v1.1
@@ -20,3 +18,11 @@ services:
     ports:
     - "${mysql_port}:3306"
     restart: always
+    environment: 
+    - MYSQL_ROOT_PASSWORD=${mysql_root_password}
+    
+  php-lb:
+    image: rancher/lb-service-haproxy:v0.7.5
+    ports:
+      - ${public_port}:${public_port}
+  
