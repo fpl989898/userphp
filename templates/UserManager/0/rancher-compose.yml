@@ -17,7 +17,7 @@ catalog:
       description: "mysql port expose to host"
       default: 3306
     - variable: "mysql_root_password"
-      type: "int"
+      type: "string"
       required: true
       label: "mysql password"
       description: "mysql root password"
