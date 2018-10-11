@@ -1,8 +1,8 @@
 version: '2'
 services:
-  php-nginx-fine:
-    image: 192.168.11.249:80/test/php-nginx:v1.1
-    container_name: php-nginx-fine1
+  php-nginx-user:
+    image: 192.168.11.249:80/test/php-nginx-user:0.0.1
+    container_name: php-nginx1
     stdin_open: true
     tty: true
     links:
@@ -10,9 +10,11 @@ services:
     depends_on:
     - mysql-fine
     restart: always
-  mysql-fine:
-    image: 192.168.11.249:80/test/mysql_fine:v1.1
-    container_name: mysql-fine1
+    environment: 
+    - MYSQL_ROOT_PASSWORD=${mysql_root_password}
+  mysql-user:
+    image: 192.168.11.249:80/test/mysql_user:0.0.1
+    container_name: mysql1
     stdin_open: true
     tty: true
     ports:

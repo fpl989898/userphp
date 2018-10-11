@@ -36,7 +36,7 @@ services:
       certs: []
       port_rules:
       - protocol: http
-        service: php-nginx-fine
+        service: php-nginx-user
         source_port: ${public_port}
         target_port: 80
     health_check:
