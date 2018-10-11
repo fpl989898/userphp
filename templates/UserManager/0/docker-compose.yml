@@ -13,7 +13,7 @@ services:
     environment: 
     - MYSQL_ROOT_PASSWORD=${mysql_root_password}
   mysql-user:
-    image: 192.168.11.249:80/test/mysql_user:0.0.1
+    image: 192.168.11.249:80/test/mysql-user:0.0.1
     container_name: mysql1
     stdin_open: true
     tty: true
