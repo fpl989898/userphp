@@ -5,9 +5,9 @@ services:
     stdin_open: true
     tty: true
     links:
-    - mysql-fine
+    - mysql-user
     depends_on:
-    - mysql-fine
+    - mysql-user
     restart: always
     environment: 
     - MYSQL_ROOT_PASSWORD=${mysql_root_password}
