@@ -8,20 +8,38 @@ catalog:
       type: "int"
       required: true
       label: "php port"
-      description: "public port to access the PHP"
+      description: "public port to access the PHP~~~"
       default: 8006
     - variable: "mysql_port"
       type: "int"
       required: true
       label: "mysql port"
-      description: "mysql port expose to host"
+      description: "mysql port expose to host~~~"
       default: 3306
     - variable: "mysql_root_password"
       type: "string"
       required: true
       label: "mysql password"
-      description: "mysql root password"
+      description: "mysql root password~~~"
       default: whu12345
+    - variable: "php_username"
+      type: "string"
+      required: true
+      label: "php username"
+      description: "user manage php username~~~"
+      default: phpuser
+    - variable: "php_user_password"
+      type: "string"
+      required: true
+      label: "php password"
+      description: "php password~~~"
+      default: 123
+    - variable: "php_user_email"
+      type: "string"
+      required: true
+      label: "php email"
+      description: "php email~~~"
+      default: 000@qq.com
 
 services:
   php-nginx-fine:
